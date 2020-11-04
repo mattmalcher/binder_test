@@ -2,6 +2,8 @@
 Trying out binder as a way to use notebooks.
 Aim is to get interactive maps within a notebook working
 
+https://mybinder.org/v2/gh/mattmalcher/binder_test/HEAD
+
 # Refs
 
 Ideas:
