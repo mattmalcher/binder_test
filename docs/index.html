@@ -139,39 +139,13 @@ width: 75%;
 
  // Defining the empty json layer
 
-    var jlayer = L.geoJSON(null, {
+    var jlayer = L.geoJSON("map.geojson", {
         onEachFeature: forEachFeature,
         pointToLayer: function (feature, latlng) {
         return L.circleMarker(latlng, geojsonMarkerOptions);
             }});
 
 
-// GeoJSON data
-
-    var data = {
-    "type": "Feature",
-      "properties": {
-            "Country_code": "ABW",
-            "Country": "Aruba",
-            "gcode": "Aruba, ARUBA, Nederland"
-    },
-    "geometry": {
-            "type": "Point",
-            "coordinates": [-69.9609842, 12.4902998]
-    }};
-
-    $.getJSON("map.geojson", function(data) {
-
-    var filejson = L.geoJson(data, {
-      onEachFeature: function (feature, layer) {
-        layer.bindPopup(feature.properties.Country);
-      }
-    });
-
-
-// Adding json to layer and adding to map
-
-    jlayer.addData(filejson).addTo(mymap);
 
 
 </script>
